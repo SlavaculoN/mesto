@@ -1,0 +1,9 @@
+.profile__info_description{
+    margin: 0px;
+    padding: 0px;
+    grid-row-start: 2;
+    font-weight: 400px;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 16px;
+}

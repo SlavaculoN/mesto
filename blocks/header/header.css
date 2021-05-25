@@ -1,0 +1,8 @@
+.header{
+    max-width: calc(100% - 400px);
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #545454;
+}
