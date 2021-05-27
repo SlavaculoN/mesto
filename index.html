@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,31 +13,86 @@
         </header>
         <main class="content">
             <section class="profile">
-                <img src="./images/image (1).png" alt="Аватар" class="profile__avatar">
+                <img src="./images/kusto.png" alt="Аватар" class="profile__avatar">
                 <div class="profile__info">
-                    <h1 class="profile__info_name">
-                        Жак-Ив Кусто
-                    </h1>
-                    <p class="profile__info_description">
-                        Исследователь океана
-                    </p>
+                    <h1 class="profile__info_name">Жак-Ив Кусто</h1>
+                    <p class="profile__info_description">Исследователь океана</p>
                     <button class="profile__edit-button" type="button"></button>
                 </div>
                 <button class="profile__add-button" type="button"></button>
             </section>
             <section class="elements">
                 <div class="element">
-                    <img src="" alt="Карачевск" class="element__photo">
+                    <img src="../mesto/images/karachevsk.png" alt="Карачевск" class="element__photo">
+                    <div class="element__description">
                     <h2 class="element__title">
-                        Карачевск
+                        Карачаевск
                     </h2>
                     <button class="element__like" type="button"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="../mesto/images/elbrus.png" alt="Гора Эльбрус" class="element__photo">
+                    <div class="element__description">
+                    <h2 class="element__title">
+                        Гора Эльбрус
+                    </h2>
+                    <button class="element__like" type="button"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="../mesto/images/dombai.png" alt="Домбай" class="element__photo">
+                    <div class="element__description">
+                    <h2 class="element__title">
+                        Домбай
+                    </h2>
+                    <button class="element__like" type="button"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="../mesto/images/elbrus.png" alt="Гора Эльбрус" class="element__photo">
+                    <div class="element__description">
+                    <h2 class="element__title">
+                        Гора Эльбрус
+                    </h2>
+                    <button class="element__like" type="button"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="../mesto/images/dombai.png" alt="Домбай" class="element__photo">
+                    <div class="element__description">
+                    <h2 class="element__title">
+                        Домбай
+                    </h2>
+                    <button class="element__like" type="button"></button>
+                    </div>
+                </div>
+                <div class="element">
+                    <img src="../mesto/images/karachevsk.png" alt="Карачевск" class="element__photo">
+                    <div class="element__description">
+                    <h2 class="element__title">
+                        Карачаево-Черкизово
+                    </h2>
+                    <button class="element__like" type="button"></button>
+                    </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
             <p class="footer__copyright">&copy; 2021. Mesto Russia</p>
         </footer>
+        <div class="popup">
+            <div class="popup__container">
+                <button class="popup__close-button" type="button"></button>
+                <p class="popup__heading">Редактировать профиль</p>
+                <form class="popup__edit-form" name="profile-form" action="#">
+                    <input class="popup__edit-name" type="text" name="profile-form-name" value="" maxlength="12">
+                    <input class="popup__edit-description" type="text" name="profile-form-description"  value=""    maxlength="69">
+                    <button class="popup__save-button" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
     </div>
+    <script src="scripts/index.js"></script>
 </body>
 </html>

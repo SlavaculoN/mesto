@@ -7,3 +7,10 @@
     line-height: 1.14;
     width: 294px;
 }
+
+@media screen and (max-width: 650px){
+    .profile__info_name{
+        font-size: 27px;
+        width: 189px;
+    }
+}
