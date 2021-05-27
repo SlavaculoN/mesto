@@ -2,7 +2,7 @@
 
 ### GitHub Pages
 
-* [Ссылка на проект]()
+* [Ссылка на проект](https://slavaculon.github.io/mesto/)
 
 ### Приминение инструментов
 
