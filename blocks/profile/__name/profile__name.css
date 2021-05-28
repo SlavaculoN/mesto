@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width: 650px){
-    .profile__info_name{
+    .profile__name{
         font-size: 27px;
         width: 189px;
         text-align: center;

@@ -8,3 +8,10 @@
     column-gap: 17px;
     justify-content: center;
 }
+
+@media screen and (max-width: 650px){
+    .elements{
+        margin: 36px auto 0px;
+    }
+    
+}
