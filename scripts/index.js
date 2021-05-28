@@ -6,8 +6,8 @@ let saveEditProfile = document.querySelector('.popup__save-button')
 let formElement = document.querySelector('.popup__edit-form');
 let nameInput = document.querySelector('.popup__edit-name');
 let jobInput = document.querySelector('.popup__edit-description');
-let profileName = document.querySelector('.profile__info_name');
-let profileJob = document.querySelector('.profile__info_description');
+let profileName = document.querySelector('.profile__name');
+let profileJob = document.querySelector('.profile__description');
 // Функции
 function openPopup(){
     nameInput.value = profileName.textContent;
