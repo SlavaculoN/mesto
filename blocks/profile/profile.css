@@ -1,6 +1,6 @@
 .profile{
     max-width: 880px;
-    margin: 40px auto 0px;
+    margin: 40px 20px 0px 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -9,5 +9,11 @@
     .profile{
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 340px){
+    .profile{
+        margin: 40px auto;
     }
 }

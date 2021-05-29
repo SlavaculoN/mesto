@@ -2,4 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 54px;
+}
+
+@media screen and (max-width: 650px){
+    .popup__edit-form{
+        margin-top: 75px;
+    }
 }
