@@ -11,6 +11,6 @@
     .popup__heading{
         width: 238px;
         font-size: 18px;
-        margin: 25px auto;
+        margin: 25px auto 0px;
     }
 }

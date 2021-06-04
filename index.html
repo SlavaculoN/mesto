@@ -19,70 +19,64 @@
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
                     <p class="profile__description">Исследователь океана</p>
-                    <button class="profile__edit-button" aria-label="Кнопка редактирования" type="button"></button>
+                    <button class="profile__edit" aria-label="Кнопка редактирования" type="button"></button>
                 </div>
-                <button class="profile__add-button" type="button"></button>
+                <button class="profile__add-card" type="button"></button>
             </section>
-            <section class="elements">
-                <div class="element">
-                    <img src="./images/karachevsk.png" alt="Карачевск" class="element__photo">
-                    <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2>
-                        <button class="element__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/elbrus.png" alt="Гора Эльбрус" class="element__photo">
-                    <div class="element__description">
-                        <h2 class="element__title">Гора Эльбрус</h2>
-                        <button class="element__like" aria-label="Кнопка лайка" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/dombai.png" alt="Домбай" class="element__photo">
-                    <div class="element__description">
-                        <h2 class="element__title">Домбай</h2>
-                        <button class="element__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/elbrus.png" alt="Гора Эльбрус" class="element__photo">
-                    <div class="element__description">
-                        <h2 class="element__title">Гора Эльбрус</h2>
-                        <button class="element__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/dombai.png" alt="Домбай" class="element__photo">
-                    <div class="element__description">
-                        <h2 class="element__title">Домбай</h2>
-                        <button class="element__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="./images/karachevsk.png" alt="Карачевск" class="element__photo">
-                    <div class="element__description">
-                        <h2 class="element__title">Карачаево-чеоыооыо</h2>
-                        <button class="element__like" type="button"></button>
-                    </div>
-                </div>
+            <section class="cards">
+
             </section>
         </main>
         <footer class="footer">
             <p class="footer__copyright">&copy; 2021. Mesto Russia</p>
         </footer>
-        <div class="popup">
+        <!--Попап'ы-->
+        <div class="popup popup_profile">
             <div class="popup__container">
-                <button class="popup__close-button" aria-label="Кнопка закрытия поп апа" type="button"></button>
+                <button class="popup__close popup__close_profile" aria-label="Кнопка закрытия поп апа"
+                    type="button"></button>
                 <h2 class="popup__heading">Редактировать профиль</h2>
-                <form class="popup__edit-form" name="profile-form" action="#">
-                    <input class="popup__edit-name" type="text" name="profile-form-name" value="">
-                    <input class="popup__edit-description" type="text" name="profile-form-description" value="">
-                    <button class="popup__save-button" type="submit">Сохранить</button>
+                <form class="popup__form" name="profile-form" action="#">
+                    <input class="popup__name" type="text" name="profile-form-name" value="">
+                    <input class="popup__description" type="text" name="profile-form-description" value="">
+                    <button class="popup__save popup__save_profile" type="submit">Сохранить</button>
                 </form>
             </div>
         </div>
+        <div class="popup popup_card">
+            <div class="popup__container">
+                <button class="popup__close popup__close_card" aria-label="Кнопка закрытия поп апа"
+                    type="button"></button>
+                <h2 class="popup__heading">Новое место</h2>
+                <form class="popup__form popup__form_card" name="popup-form" action="#">
+                    <input class="popup__name popup__title" type="text" name="card-form-title" value=""
+                        placeholder="Название">
+                    <input class="popup__description popup__link" type="text" name="card-form-link" value=""
+                        placeholder="Ссылка на картинку">
+                    <button class="popup__save popup__save_card" type="submit">Создать</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup_img">
+            <div class="popup__container_img">
+                <img src="" alt="" class="popup__image_xxl">
+                <button class="popup__close popup__close_img" aria-label="Кнопка закрытия поп апа"
+                    type="button"></button>
+                <h2 class="popup__heading popup__heading_img"></h2>
+            </div>
+        </div>
     </div>
+    <!--Темплейты-->
+    <template class="card-template">
+        <div class="card">
+            <img src="" alt="" class="card__photo">
+            <button class="card__delete" type="button"></button>
+            <div class="card__description">
+                <h2 class="card__title"></h2>
+                <button class="card__like" type="button"></button>
+            </div>
+        </div>
+    </template>
     <script src="scripts/index.js"></script>
 </body>
 

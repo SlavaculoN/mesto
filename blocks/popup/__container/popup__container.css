@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
     background-color: #ffffff;
-    width: 430px;
+    max-width: 430px;
     border-radius: 10px;
     transform: translate(-50%, -50%);
     display: flex;
