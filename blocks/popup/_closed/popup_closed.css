@@ -1,0 +1,16 @@
+.popup_closed{
+  display: block;
+  opacity: 1;
+  animation: popup_closed 1s;
+}
+
+@keyframes popup_closed {
+  0% {
+       opacity: 1;
+  }
+
+  100% {
+       opacity: 0;
+       display: none;
+  }
+}

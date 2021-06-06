@@ -1,6 +1,6 @@
 .popup_opened{
     display: block;
-    animation: popup_opened 0.5s;
+    animation: popup_opened 0.9s;
 }
 
 @keyframes popup_opened {
