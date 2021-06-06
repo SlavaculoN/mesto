@@ -77,7 +77,7 @@ const openPopupCard = document.querySelector('.profile__add-card');
 const closePopupCard = document.querySelector('.popup__close_card');
 const openPopupImg = document.querySelector('.popup_img');
 const titleImg = document.querySelector('.popup__heading_img');
-const photoImg = document.querySelector('.popup__image_xxl');
+const photoImg = document.querySelector('.popup__photo');
 const closeImgBtn = document.querySelector('.popup__close_img');
 // Функции
 initialCards.forEach(item => {
