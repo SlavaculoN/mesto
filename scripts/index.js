@@ -133,6 +133,7 @@ function newCard(evt) {
 
 
     closePopupCards();
+
 };
 
 function closePopupImg() {
