@@ -31,7 +31,7 @@
             <p class="footer__copyright">&copy; 2021. Mesto Russia</p>
         </footer>
         <!--Попап'ы-->
-        <div class="popup popup_profile">
+        <div class="popup popup_type_profile">
             <div class="popup__container">
                 <button class="popup__close popup__close_profile" aria-label="Кнопка закрытия поп апа"
                     type="button"></button>
@@ -43,7 +43,7 @@
                 </form>
             </div>
         </div>
-        <div class="popup popup_card">
+        <div class="popup popup_type_card">
             <div class="popup__container">
                 <button class="popup__close popup__close_card" aria-label="Кнопка закрытия поп апа"
                     type="button"></button>
@@ -57,8 +57,9 @@
                 </form>
             </div>
         </div>
-        <div class="popup popup_img">
+        <div class="popup popup_type_img">
             <div class="popup__image">
+                <!--src не могу оставить пустым так как робот яндекса не дает отправить на ревью-->
                 <img src="1" alt="1" class="popup__photo">
                 <button class="popup__close popup__close_img" aria-label="Кнопка закрытия поп апа"
                     type="button"></button>
@@ -69,6 +70,7 @@
     <!--Темплейты-->
     <template class="card-template">
         <div class="card">
+            <!--src не могу оставить пустым так как робот яндекса не дает отправить на ревью-->
             <img src="1" alt="1" class="card__photo">
             <button class="card__delete" type="button"></button>
             <div class="card__description">
@@ -77,6 +79,7 @@
             </div>
         </div>
     </template>
+    <script src="scripts/initial-cards.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 
