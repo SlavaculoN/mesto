@@ -3,7 +3,7 @@ const editProfile = document.querySelector('.popup_type_profile');
 const openEditProfile = document.querySelector('.profile__edit');
 const closeEditProfile = document.querySelector('.popup__close_profile');
 const saveEditProfile = document.querySelector('.popup__save_profile')
-const hundleProfileFormSubmit = document.querySelector('.popup__form');
+const profileForm = document.querySelector('.popup__form');
 const nameInput = document.querySelector('.popup__name');
 const jobInput = document.querySelector('.popup__description');
 const profileName = document.querySelector('.profile__name');
@@ -13,10 +13,7 @@ function openPopup(popup) {
     popup.classList.add('popup_opened');
 };
 function closePopup(popup) {
-    // Добавленный стиль popup_closed я использую для реализации плавного закрывания попапа 
-    popup.classList.add('popup_closed');
     popup.classList.remove('popup_opened');
-    setTimeout(() => popup.classList.remove('popup_closed'), 900);
 };
 
 //Попап профиля
@@ -30,7 +27,7 @@ function closeProfilePopup() {
     closePopup(editProfile);
 };
 
-function saveProfilePopup(evt) {
+function hundleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
@@ -39,7 +36,7 @@ function saveProfilePopup(evt) {
 // Слушатели //
 openEditProfile.addEventListener('click', openProfilePopup);
 closeEditProfile.addEventListener('click', closeProfilePopup);
-hundleProfileFormSubmit.addEventListener('submit', saveProfilePopup);
+profileForm.addEventListener('submit', closeProfilePopup);
 
 
 // Проектная работа №5 //
@@ -47,7 +44,6 @@ hundleProfileFormSubmit.addEventListener('submit', saveProfilePopup);
 // Переменные
 const cardList = document.querySelector('.cards');
 const cardTemplate = document.querySelector('.card-template').content;
-const deconsteCard = document.querySelector('.card__deconste');
 const formCard = document.querySelector('.popup__form_card');
 const titleInput = document.querySelector('.popup__title');
 const linkInput = document.querySelector('.popup__link');
@@ -62,19 +58,19 @@ const photoImg = document.querySelector('.popup__photo');
 const closeImgBtn = document.querySelector('.popup__close_img');
 // Функции
 initialCards.forEach(item => {
-    const cards = createCard(item);
-    cardList.append(cards);
+    const card = createCard(item);
+    cardList.append(card);
 });
 //Попап карточек
 function openPopupCards() {
     openPopup(addPopupCard);
 };
 
-function handleAddCardFormSubmt() {
+function closePopupCards() {
     closePopup(addPopupCard);
 };
 
-function newCard(evt) {
+function hundleFormCardSubmit(evt) {
     evt.preventDefault();
     const values =
     {
@@ -89,7 +85,7 @@ function newCard(evt) {
     titleInput.value = '';
     linkInput.value = '';
 
-    handleAddCardFormSubmt();
+    closePopupCards();
 };
 
 function closePopupImg() {
@@ -124,6 +120,6 @@ function createCard(item) {
 };
 //Слушатели
 openPopupCard.addEventListener('click', openPopupCards);
-closePopupCard.addEventListener('click', handleAddCardFormSubmt);
-formCard.addEventListener('submit', newCard);
+closePopupCard.addEventListener('click', closePopupCards);
+formCard.addEventListener('submit', hundleFormCardSubmit);
 closeImgBtn.addEventListener('click', closePopupImg);
