@@ -36,7 +36,7 @@ function hundleProfileFormSubmit(evt) {
 // Слушатели //
 openEditProfile.addEventListener('click', openProfilePopup);
 closeEditProfile.addEventListener('click', closeProfilePopup);
-profileForm.addEventListener('submit', closeProfilePopup);
+profileForm.addEventListener('submit', hundleProfileFormSubmit);
 
 
 // Проектная работа №5 //
