@@ -31,7 +31,7 @@ function hundleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
-    closePopup(editProfile);
+    closeProfilePopup();
 }
 // Слушатели //
 openEditProfile.addEventListener('click', openProfilePopup);
