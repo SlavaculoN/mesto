@@ -33,34 +33,41 @@
         <!--Попап'ы-->
         <div class="popup popup_type_profile">
             <div class="popup__container">
-                <button class="popup__close popup__close_profile" aria-label="Кнопка закрытия поп апа"
+                <button class="popup__close-btn popup__close-btn_profile" aria-label="Кнопка закрытия поп апа"
                     type="button"></button>
                 <h2 class="popup__heading">Редактировать профиль</h2>
-                <form class="popup__form" name="profile-form" action="#">
-                    <input class="popup__name" type="text" name="profile-form-name" value="">
-                    <input class="popup__description" type="text" name="profile-form-description" value="">
-                    <button class="popup__save popup__save_profile" type="submit">Сохранить</button>
+                <form class="popup__form popup__form_profile" name="profileForm" action="#" novalidate>
+                    <input class="popup__input popup__input_type_name" id="profile-name" type="text" value=""
+                        minlength="2" maxlength="40" required>
+                    <span class="popup__input-error" id="profile-name-error"></span>
+                    <input class="popup__input popup__input_type_description" id="profile-description" type="text"
+                        value="" minlength="2" maxlength="200" required>
+                    <span class="popup__input-error" id="profile-description-error"></span>
+                    <button class="popup__save-btn popup__save-btn_profile" type="submit">Сохранить</button>
                 </form>
             </div>
         </div>
         <div class="popup popup_type_card">
             <div class="popup__container">
-                <button class="popup__close popup__close_card" aria-label="Кнопка закрытия поп апа"
+                <button class="popup__close-btn popup__close-btn_card" aria-label="Кнопка закрытия поп апа"
                     type="button"></button>
                 <h2 class="popup__heading">Новое место</h2>
-                <form class="popup__form popup__form_card" name="popup-form" action="#">
-                    <input class="popup__name popup__title" type="text" name="card-form-title" value=""
-                        placeholder="Название">
-                    <input class="popup__description popup__link" type="text" name="card-form-link" value=""
-                        placeholder="Ссылка на картинку">
-                    <button class="popup__save popup__save_card" type="submit">Создать</button>
+                <form class="popup__form popup__form_card" name="cardForm" action="#" novalidate>
+                    <input class="popup__input popup__input_type_title" id="card-name" type="text" value=""
+                        placeholder="Название" minlength="2" maxlength="40" required>
+                    <span class="popup__input-error" id="card-name-error"></span>
+                    <input class="popup__input popup__input_type_link" id="card-link" type="url" value=""
+                        placeholder="Ссылка на картинку" minlength="2" required>
+                    <span class="popup__input-error" id="card-link-error"> </span>
+                    <button disabled class="popup__save-btn popup__save-btn_disabled popup__save-btn_card"
+                        type="submit">Создать</button>
                 </form>
             </div>
         </div>
         <div class="popup popup_type_img">
             <div class="popup__image">
                 <img src="#" alt="#" class="popup__photo">
-                <button class="popup__close popup__close_img" aria-label="Кнопка закрытия поп апа"
+                <button class="popup__close-btn popup__close-btn_img" aria-label="Кнопка закрытия поп апа"
                     type="button"></button>
                 <h2 class="popup__heading popup__heading_img"></h2>
             </div>
@@ -79,6 +86,7 @@
     </template>
     <script src="scripts/initial-cards.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/validate.js"></script>
 </body>
 
 </html>
