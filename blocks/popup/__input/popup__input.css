@@ -10,7 +10,3 @@
         width: 238px;
     }
 }
-
-.popup__input:invalid{
-    border-bottom: 1px solid red;
-}
