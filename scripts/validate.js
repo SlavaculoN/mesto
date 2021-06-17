@@ -62,5 +62,5 @@ enableValidation({
   input: '.popup__input',
   submitButton: '.popup__save-btn',
   sumbitButtonDisabled: 'popup__save-btn_disabled',
-  inputError: 'popup__input_type_error',
+  inputError: 'popup__input_disabled',
 });

@@ -36,9 +36,9 @@ function closePopup(popup) {
 
 function openProfilePopup() {
     openPopup(editProfile);
-    submitButtonEnable(editProfile);
-    hideInputError(editProfile, nameInput);
-    hideInputError(editProfile, descriptionInput);
+    //submitButtonEnable(editProfile);
+    //hideInputError(editProfile, nameInput);
+    //hideInputError(editProfile, descriptionInput);
     nameInput.value = profileName.textContent;
     descriptionInput.value = profileDescription.textContent;
 };
@@ -61,7 +61,7 @@ initialCards.forEach(item => {
 
 function openPopupCards() {
     openPopup(addPopupCard);
-    submitButtonDisabled(addPopupCard);
+    //submitButtonDisabled(addPopupCard);
 };
 
 function closePopupCards() {
