@@ -36,9 +36,6 @@ function closePopup(popup) {
 
 function openProfilePopup() {
     openPopup(editProfile);
-    //submitButtonEnable(editProfile);
-    //hideInputError(editProfile, nameInput);
-    //hideInputError(editProfile, descriptionInput);
     nameInput.value = profileName.textContent;
     descriptionInput.value = profileDescription.textContent;
 };
@@ -61,7 +58,6 @@ initialCards.forEach(item => {
 
 function openPopupCards() {
     openPopup(addPopupCard);
-    //submitButtonDisabled(addPopupCard);
 };
 
 function closePopupCards() {
@@ -111,16 +107,15 @@ function createCard(item) {
 };
 
 function keyHandler(evt) {
-    const popupOpened = document.querySelector('.popup_opened');
-
     if (evt.key === "Escape") {
+        const popupOpened = document.querySelector('.popup_opened');
         closePopup(popupOpened);
     };
 };
 
 function overlayClosePopup(evt) {
-    const popupOpened = document.querySelector('.popup_opened');
     if (evt.target.classList.contains('popup_opened')) {
+        const popupOpened = document.querySelector('.popup_opened');
         closePopup(popupOpened);
     }
 }

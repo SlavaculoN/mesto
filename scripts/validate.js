@@ -1,66 +1,68 @@
-const checkValid = (formElement, inputElement) => {
-  if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage);
-  } else {
-    hideInputError(formElement, inputElement);
-  }
-
-  if (!formElement.checkValidity()) {
-    submitButtonDisabled(formElement)
-  } else {
-    submitButtonEnable(formElement);
-  }
-};
-
-const showInputError = (formElement, inputElement, errorMessage) => {
-  const errorText = formElement.querySelector(`#${inputElement.id}-error`);
-  inputElement.classList.add('popup__input_invalid');
-  errorText.textContent = errorMessage;
-};
-
-const hideInputError = (formElement, inputElement) => {
-  const errorText = formElement.querySelector(`#${inputElement.id}-error`);
-  inputElement.classList.remove('popup__input_invalid');
-  errorText.textContent = '';
-};
-
-const submitButtonEnable = (formElement) => {
-  const buttonSubmit = formElement.querySelector('.popup__save-btn');
-  buttonSubmit.classList.remove('popup__save-btn_disabled');
-  buttonSubmit.removeAttribute('disabled');
-};
-
-const submitButtonDisabled = (formElement) => {
-  const buttonSubmit = formElement.querySelector('.popup__save-btn');
-  buttonSubmit.classList.add('popup__save-btn_disabled');
-  buttonSubmit.setAttribute('disabled', true);
-}
-
-const setEventListeners = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll('.popup__input'));
-
-  inputList.forEach((inputElement) => {
-    inputElement.addEventListener('input', () => {
-      checkValid(formElement, inputElement);
-    });
-  });
-};
-
-const enableValidation = () => {
-  const formList = Array.from(document.querySelectorAll('.popup__form'));
+const enableValidation = (config) => {
+  const formList = Array.from(document.querySelectorAll(config.form));
 
   formList.forEach((formElement) => {
     formElement.addEventListener('submit', (evt) => {
       evt.preventDefault();
+      if (formElement === formCard) {
+        submitButtonDisabled(formElement, config);
+      };
     });
-    setEventListeners(formElement);
+    setEventListeners(formElement, config);
   });
 };
+
+const checkValid = (formElement, inputElement, config) => {
+  if (!inputElement.validity.valid) {
+    showInputError(formElement, inputElement, config);
+  } else {
+    hideInputError(formElement, inputElement, config);
+  }
+
+  if (!formElement.checkValidity()) {
+    submitButtonDisabled(formElement, config)
+  } else {
+    submitButtonEnable(formElement, config);
+  }
+};
+
+const setEventListeners = (formElement, config) => {
+  const inputList = Array.from(formElement.querySelectorAll(config.input));
+  inputList.forEach((inputElement) => {
+    inputElement.addEventListener('input', () => {
+      checkValid(formElement, inputElement, config);
+    });
+  });
+};
+
+const showInputError = (formElement, inputElement, config) => {
+  const errorText = formElement.querySelector(`#${inputElement.id}-error`);
+  inputElement.classList.add(config.inputError);
+  errorText.textContent = inputElement.validationMessage;
+};
+
+const hideInputError = (formElement, inputElement, config) => {
+  const errorText = formElement.querySelector(`#${inputElement.id}-error`);
+  inputElement.classList.remove(config.inputError);
+  errorText.textContent = '';
+};
+
+const submitButtonEnable = (formElement, config) => {
+  const buttonSubmit = formElement.querySelector(config.submitButton);
+  buttonSubmit.classList.remove(config.submitButtonDisabled);
+  buttonSubmit.removeAttribute('disabled');
+};
+
+const submitButtonDisabled = (formElement, config) => {
+  const buttonSubmit = formElement.querySelector(config.submitButton);
+  buttonSubmit.classList.add(config.submitButtonDisabled);
+  buttonSubmit.setAttribute('disabled', true);
+}
 
 enableValidation({
   form: '.popup__form',
   input: '.popup__input',
   submitButton: '.popup__save-btn',
-  sumbitButtonDisabled: 'popup__save-btn_disabled',
-  inputError: 'popup__input_disabled',
+  submitButtonDisabled: 'popup__save-btn_disabled',
+  inputError: 'popup__input_invalid',
 });

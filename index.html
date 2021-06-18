@@ -59,7 +59,8 @@
                     <input class="popup__input popup__input_type_link" name="cardLink" id="card-link" type="url"
                         value="" placeholder="Ссылка на картинку" minlength="2" required>
                     <span class="popup__input-error" id="card-link-error"> </span>
-                    <button class="popup__save-btn  popup__save-btn_card" type="submit">Создать</button>
+                    <button disabled class="popup__save-btn popup__save-btn_disabled popup__save-btn_card"
+                        type="submit">Создать</button>
                 </form>
             </div>
         </div>
@@ -84,8 +85,8 @@
         </div>
     </template>
     <script src="scripts/initial-cards.js"></script>
+    <script src="scripts/validate.js"></script>
     <script src="scripts/index.js"></script>
-    <script src="scripts/validate copy.js"></script>
 </body>
 
 </html>
